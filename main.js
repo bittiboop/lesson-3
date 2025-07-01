@@ -101,3 +101,30 @@ function getRandomEven(min, max){
     } while (randomNum % 2 !== 0);
     return randomNum;
 }
+
+
+let user = {
+    name: "Jimin"
+}
+let clone ={};
+for (let key in user) {
+    clone[key] = user[key];
+}
+clone.name = "Jungkook";
+alert(user.name); // "Jimin"
+
+let permission1 = { canView: true };
+let permission2 = { canEdit: true };
+Object.assign(user, permission1, permission2);
+alert(user.canView); // true
+alert(user.canEdit); // true
+
+
+let a = {};
+let b = a;
+alert(a === b); // true
+//let a = {}
+//let b = {}
+//alert(a == b) //false
+
+//shallow copy 
